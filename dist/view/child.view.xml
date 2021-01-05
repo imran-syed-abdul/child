@@ -1,0 +1,15 @@
+<mvc:View controllerName="com.ui5.child.controller.child" 
+xmlns:bourne="com.ui5.imranlib"
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<bourne:ProductRating/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

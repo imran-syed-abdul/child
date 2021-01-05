@@ -1,0 +1,1 @@
+sap.ui.define(["com/ui5/child/controller/child.controller"],function(t){"use strict";QUnit.module("child Controller");QUnit.test("I should test the child controller",function(o){var l=new t;l.onInit();o.ok(l)})});

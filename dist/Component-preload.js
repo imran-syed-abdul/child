@@ -1,0 +1,14 @@
+//@ui5-bundle com/ui5/child/Component-preload.js
+jQuery.sap.registerPreloadedModules({
+"version":"2.0",
+"modules":{
+	"com/ui5/child/Component.js":function(){sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","com/ui5/child/model/models"],function(e,i,t){"use strict";return e.extend("com.ui5.child.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(t.createDeviceModel(),"device")}})});
+},
+	"com/ui5/child/controller/child.controller.js":function(){sap.ui.define(["sap/ui/core/mvc/Controller"],function(n){"use strict";return n.extend("com.ui5.child.controller.child",{onInit:function(){}})});
+},
+	"com/ui5/child/i18n/i18n.properties":'title=Title\nappTitle=child\nappDescription=App Description',
+	"com/ui5/child/manifest.json":'{"_version":"1.12.0","sap.app":{"id":"com.ui5.child","type":"application","i18n":"i18n/i18n.properties","applicationVersion":{"version":"1.0.0"},"title":"{{appTitle}}","description":"{{appDescription}}","sourceTemplate":{"id":"ui5template.basicSAPUI5ApplicationProject","version":"1.40.12"}},"sap.ui":{"technology":"UI5","icons":{"icon":"","favIcon":"","phone":"","phone@2":"","tablet":"","tablet@2":""},"deviceTypes":{"desktop":true,"tablet":true,"phone":true}},"sap.ui5":{"flexEnabled":false,"rootView":{"viewName":"com.ui5.child.view.child","type":"XML","async":true,"id":"child"},"dependencies":{"minUI5Version":"1.65.6","libs":{"sap.ui.layout":{},"sap.ui.core":{},"sap.m":{},"com.ui5.imranlib":{"minVersion":"1.0.0"}}},"contentDensities":{"compact":true,"cozy":true},"models":{"i18n":{"type":"sap.ui.model.resource.ResourceModel","settings":{"bundleName":"com.ui5.child.i18n.i18n"}}},"resources":{"css":[{"uri":"css/style.css"}]},"routing":{"config":{"routerClass":"sap.m.routing.Router","viewType":"XML","async":true,"viewPath":"com.ui5.child.view","controlAggregation":"pages","controlId":"app","clearControlAggregation":false},"routes":[{"name":"Routechild","pattern":"Routechild","target":["Targetchild"]}],"targets":{"Targetchild":{"viewType":"XML","transition":"slide","clearControlAggregation":false,"viewId":"child","viewName":"child"}}}},"sap.platform.hcp":{"uri":"webapp","_version":"1.1.0"}}',
+	"com/ui5/child/model/models.js":function(){sap.ui.define(["sap/ui/model/json/JSONModel","sap/ui/Device"],function(e,n){"use strict";return{createDeviceModel:function(){var i=new e(n);i.setDefaultBindingMode("OneWay");return i}}});
+},
+	"com/ui5/child/view/child.view.xml":'<mvc:View controllerName="com.ui5.child.controller.child" \nxmlns:bourne="com.ui5.imranlib"\nxmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"><Shell id="shell"><App id="app"><pages><Page id="page" title="{i18n>title}"><content><bourne:ProductRating/></content></Page></pages></App></Shell></mvc:View>'
+}});
